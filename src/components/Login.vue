@@ -73,7 +73,6 @@ export default {
           return this.$message.error('登陆失败！')
         }
         this.$message.success('登录成功！')
-        console.log(res)
         window.sessionStorage.setItem('token', res.data.token)
         // 登录成功的token，保存到客户端的SessionStorage中
         // 1.1项目中除了登录之外的API接口，必须要登录之后才能访问

@@ -156,7 +156,6 @@ export default {
         return this.$message.error('获取角色列表失败！')
       }
       this.roleList = res.data
-      console.log(this.roleList)
     },
     // 根据id删除对应的权限
     async removeRightById(role, rid) {
@@ -192,7 +191,6 @@ export default {
         return this.$message.error('获取权限列表失败！')
       }
       this.rightsList = res.data
-      console.log(this.rightsList)
       // 递归调用获取所有的三级权限id
       this.getAllDefKeys(role, this.defKeys)
       this.setRightDialodialogVisible = true
