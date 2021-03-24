@@ -4,7 +4,6 @@
     <el-header>
       <div>
         <img src="../assets/logo.png" alt="" />
-        <span>电商管理系统</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button>
     </el-header>
@@ -108,10 +107,10 @@ export default {
 
 <style lang="less" scoped>
 .el-header {
-  background-color: #373d41;
+  background:linear-gradient(to top,lightblue 20%,#ffffff);
   display: flex;
   justify-content: space-between;
-  padding-left: 0;
+  padding-left: 10px;
   align-items: center;
   color: #ffffff;
   font-size: 20px;
@@ -119,7 +118,7 @@ export default {
     display: flex;
     align-items: center;
     img {
-      width: 50px;
+      width: 380px;
       height: 50px;
     }
     span {
