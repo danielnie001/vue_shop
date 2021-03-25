@@ -2,7 +2,7 @@
   <div class="login_container">
     <div class="login_box">
       <div class="avatar-box">
-        <img src="../assets/logo.png" alt="" />
+        <img src="../assets/logo1.png" alt="" />
       </div>
       <el-form
         label-width="0px"
