@@ -4,31 +4,16 @@
       <div class="avatar-box">
         <img src="../assets/logo1.png" alt="" />
       </div>
-      <el-form
-        label-width="0px"
-        class="login_form"
-        :model="loginForm"
-        :rules="loginRules"
-        ref="loginForm"
-      >
+      <el-form label-width="0px" class="login_form" :model="loginForm" :rules="loginRules" ref="loginForm">
         <el-form-item prop="username">
-          <el-input
-            prefix-icon="iconfont icon-yonghu"
-            v-model="loginForm.username"
-          ></el-input>
+          <el-input prefix-icon="iconfont icon-yonghu" v-model="loginForm.username"></el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input
-            prefix-icon="iconfont icon-ziyuanxhdpi"
-            v-model="loginForm.password"
-            type="password"
-          ></el-input>
+          <el-input prefix-icon="iconfont icon-ziyuanxhdpi" v-model="loginForm.password" type="password"></el-input>
         </el-form-item>
         <el-form-item class="btns">
           <el-button type="primary" @click="onSubmit">登录</el-button>
-          <el-button type="info" @click="resetForm('loginForm')"
-            >重置</el-button
-          >
+          <el-button type="info" @click="resetForm('loginForm')">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -73,6 +58,7 @@ export default {
           return this.$message.error('登陆失败！')
         }
         this.$message.success('登录成功！')
+        console.log('登录成功！')
         window.sessionStorage.setItem('token', res.data.token)
         // 登录成功的token，保存到客户端的SessionStorage中
         // 1.1项目中除了登录之外的API接口，必须要登录之后才能访问
